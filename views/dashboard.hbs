@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<!-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+ -->
+<html lang="en">
+<head>
+	<title>Cloud Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	<!-- <meta http-equiv="refresh" content="5"> -->
+	
+	<!-- {{name}}
+	<input type="text" value={{name}} name=""> -->
+
+	<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+	
+		<div class="container p-l-55 p-r-55 p-t-80 p-b-30" style="background: rgba(255, 255, 255, .8) !important;">
+			<span class="login100-form-title p-b-37">
+					<img alt="" src="images/logo.png">
+				</span>
+				<span class="login100-form-title p-b-37">
+					Dashboard
+				</span>
+				<div class="container">
+				<div class="row" style="flex-wrap: nowrap; margin-left: -32px;">
+				<!-- <div class="col-md-3"></div>  -->
+				<div class="col-md-6 text-center">
+					<button id="OnButton" class="login100-form-btn col-md-11" style="background-color: #22a739" onclick="onFunction()">
+						Calibration on
+					</button>
+				</div>
+					
+					<div class="col-md-6">			
+					<button id="OffButton" class="login100-form-btn col-md-11" style="background-color: #d45959; opacity:0.5; margin-left: 8.3333333%;" onclick="offFunction()">
+						Calibration off
+					</button>
+					</div>
+
+
+				</div>
+				</div>
+				
+				<div class="row">
+				
+				<div class="col-md-5">
+			
+				<div class="col-md-9 row ">
+				<p class="input100" style="padding-top:29px">Input Real 1 [From PLC]</p>
+						<div class="wrap-input100">
+					<input readonly class="input100 centerTextAndAdjustSize" type="text" id="inputParam1" value="" placeholder="input value 1">
+					<span class="focus-input100"></span>
+				</div>
+				</div>
+				
+				
+				<div class="col-md-9 row">
+				<p class="input100" style="padding-top:29px">Input Real 2</p>
+						<div class="wrap-input100">
+					<input readonly class="input100 centerTextAndAdjustSize" type="text" id="inputParam2" placeholder="input value 2" />
+					<span class="focus-input100"></span>
+				</div>
+				</div>
+				
+				<div class="col-md-9 row">
+				<p class="input100" style="padding-top:29px">Input Real 3</p>
+						<div class="wrap-input100">
+					<input readonly class="input100 centerTextAndAdjustSize" type="text" id="inputParam3" placeholder="input value 3" />
+					<span class="focus-input100"></span>
+				</div>
+				</div>
+				
+				<div class="col-md-9 row">
+				<p class="input100" style="padding-top:29px">Input Real 4</p>
+						<div class="wrap-input100">
+					<input readonly class="input100 centerTextAndAdjustSize" type="text" id="inputParam4" placeholder="input value 4" />
+					<span class="focus-input100"></span>
+				</div>
+				</div>
+				
+				<div class="col-md-9 row">
+				<p class="input100" style="padding-top:29px">Input Real 5</p>
+						<div class="wrap-input100">
+					<input readonly class="input100 centerTextAndAdjustSize" type="text" id="inputParam5" placeholder="input value 5" />
+					<span class="focus-input100"></span>
+				</div>
+				</div>
+				
+				<div class="col-md-9 row">
+				<p class="input100" style="padding-top:29px">Input Real 6</p>
+						<div class="wrap-input100">
+					<input readonly class="input100 centerTextAndAdjustSize" type="text" id="inputParam6" placeholder="input value 6" />
+					<span class="focus-input100"></span>
+				</div>
+				</div>
+				
+				<div class="col-md-9 row">
+				<p class="input100" style="padding-top:29px">Input Real 7</p>
+						<div class="wrap-input100 validate-input">
+					<input class="input100 centerTextAndAdjustSize" type="text" id="inputParam7" placeholder="input value 7" />
+					<span class="focus-input100"></span>
+				</div>
+				</div>
+				
+				<div class="col-md-9 row">
+				<p class="input100" style="padding-top:29px">Input Real 8</p>
+						<div class="wrap-input100">
+					<input readonly class="input100 centerTextAndAdjustSize" type="text" id="inputParam8" placeholder="input value 8" />
+					<span class="focus-input100"></span>
+				</div>
+				</div>
+				
+				
+				
+				
+				</div>
+				
+				<div class="col-md-2"></div>
+				
+				<div class="col-md-5">
+				
+				<div class="col-md-9 row">
+				<p class="input100" style="padding-top:29px">Output Real 1 [To PLC]</p>
+						<div class="wrap-input100 ">
+					<input class="input100 centerTextAndAdjustSize" type="text" id="outputParam1" placeholder="output value 1" value="12" onblur="SendOutput('1',document.getElementById('outputParam1').value) " />
+					<span class="focus-input100"></span>
+				</div>
+				</div>
+				
+				<div class="col-md-9 row">
+				<p class="input100" style="padding-top:29px">Output Real 2</p>
+						<div class="wrap-input100 ">
+					<input class="input100 centerTextAndAdjustSize" type="text" id="outputParam2" placeholder="output value 2" value="12"
+					onblur="SendOutput('2',document.getElementById('outputParam2').value)" />
+					<span class="focus-input100"></span>
+				</div>
+				</div>
+				
+				<div class="col-md-9 row">
+				<p class="input100" style="padding-top:29px">Output Real 3</p>
+						<div class="wrap-input100 ">
+					<input class="input100 centerTextAndAdjustSize" type="text" id="outputParam3" placeholder="output value 3" value="12"
+					onblur="SendOutput('3',document.getElementById('outputParam3').value)" />
+					<span class="focus-input100"></span>
+				</div>
+				</div>
+				
+				<div class="col-md-9 row">
+				<p class="input100" style="padding-top:29px">Output Real 4</p>
+						<div class="wrap-input100">
+					<input class="input100 centerTextAndAdjustSize" type="text" id="outputParam4" placeholder="output value 4" value="12"
+					onblur="SendOutput('4',document.getElementById('outputParam4').value)" />
+					<span class="focus-input100"></span>
+				</div>
+				</div>
+				
+				<div class="col-md-9 row">
+				<p class="input100" style="padding-top:29px">Output Real 5</p>
+						<div class="wrap-input100">
+					<input class="input100 centerTextAndAdjustSize" type="text" id="outputParam5" placeholder="output value 5" value="12"
+					onblur="SendOutput('5',document.getElementById('outputParam5').value)" />
+					<span class="focus-input100"></span>
+				</div>
+				</div>
+				
+				<div class="col-md-9 row">
+				<p class="input100" style="padding-top:29px">Output Real 6</p>
+						<div class="wrap-input100">
+					<input class="input100 centerTextAndAdjustSize" type="text" id="outputParam6" placeholder="output value 6" value="12"
+					onblur="SendOutput('6',document.getElementById('outputParam6').value)" />
+					<span class="focus-input100"></span>
+				</div>
+				</div>
+
+				<div class="col-md-9 row">
+				<p class="input100" style="padding-top:29px">Output Real 7</p>
+						<div class="wrap-input100">
+					<input class="input100 centerTextAndAdjustSize" type="text" id="outputParam7" placeholder="output value 7" value="12"
+					onchange="SendOutput('7',document.getElementById('outputParam7').value)" />
+					<span class="focus-input100"></span>
+				</div>
+				</div>
+
+				<div class="col-md-9 row">
+				<p class="input100" style="padding-top:29px">Output Real 8</p>
+						<div class="wrap-input100">
+					<input class="input100 centerTextAndAdjustSize" type="text" id="outputParam8" placeholder="output value 8" value="12"
+					onchange="SendOutput('8',document.getElementById('outputParam8').value)" />
+					<span class="focus-input100"></span>
+				</div>
+				</div>
+				
+				</div>
+				
+				
+				</div>   <!-- row -->
+				
+				<!-- onblur="setPointOnBlur()" -->
+				
+				
+				<!-- <button id="pumpOffButton" class="login100-form-btn col-md-2" style="background-color: #d45959; float:right;" onclick="pumpOff()">
+						Pump off
+					</button> -->
+				
+				
+			
+
+			
+		</div>
+	</div>
+	
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+	<script src='/socket.io/socket.io.js'></script>
+        <script>
+            var socket = io();
+
+
+             socket.on('InputFromServer', function(data) {
+
+               for(var i=0; i<Object.keys(data).length;i++)
+	      	  {
+	        	document.getElementById(Object.keys(data)[i]).value = data[Object.keys(data)[i]];        	
+		     	console.log(Object.keys(data)[i] + " -----" + data[Object.keys(data)[i]]);
+	      	  }
+
+             });
+
+       
+            function SendOutput(index,value) {
+            	// validation
+            	var numbers = /^[0-9.]+$/;
+
+            	if(value.match(numbers))
+      			{
+      				alert('Output Parameter Number '+index+' is modified as '+value);
+                	console.log(index+"  :  "+value);
+                	socket.emit('OutputFromFE', {"index":index,"value":value});
+                }
+
+                else
+                {
+                	document.getElementById("outputParam"+index).value="";
+                	//str.substring(1, 4);
+                	alert('Output Parameter Number '+index+' is in improper format '+value);
+                	console.log("fail");
+                }
+            }
+
+            function onFunction()
+            {
+            	socket.emit('OutputFromFE', {"index":'0',"value":'1'});
+            	document.getElementById("OnButton").style.opacity="1";
+            	document.getElementById("OffButton").style.opacity="0.5";
+            }
+
+            function offFunction()
+            {
+            	socket.emit('OutputFromFE', {"index":'0',"value":'0'});
+            	document.getElementById("OffButton").style.opacity="1";
+            	document.getElementById("OnButton").style.opacity="0.5";
+            }
+        </script>
+	
+
+</body>
+</html>
