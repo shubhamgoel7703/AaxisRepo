@@ -50,12 +50,19 @@ io.sockets.on('connection', function(socket) {
 
       socket.on('checkStatus', function(data) 
        {
-        
+        console.log("CCCCCCCC");
+
         if(plcSocket!=null)
-        socket.broadcast.emit('iotStatus',"1");
+        {
+         socket.broadcast.emit('iotStatus', "1");
+         console.log("11111111111");
+        }
 
         else
+        {
            socket.broadcast.emit('iotStatus',"0");
+           console.log("00000000000");
+        }
         
        });
 

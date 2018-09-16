@@ -43,11 +43,11 @@
 				</span> -->
 
 				<div class= "row">
-					<div class="col-md-6"><span class="login100-form-title p-b-37">
+					<div class="col-md-12"><span class="login100-form-title p-b-37">
 					<img alt="" src="images/logo.png">
 				</span> </div>
 
-				<div class="col-md-6 row">
+				<!-- <div class="col-md-6 row">
 
 					<img class="col-md-2" alt="" src="images/plcImage.png" style="width: 50px;height: 50px;">
 					
@@ -59,7 +59,7 @@
 
 					<img class="col-md-2" alt="" src="images/cloudImage.png" style="width: 50px;height: 50px;">
 
-				</div>
+				</div> -->
 				</div>
 					</br>
 				<!-- <span class="login100-form-title p-b-37">
@@ -267,11 +267,13 @@
         <script>
             var socket = io();
             var plcStatus;
-            	
-            socket.emit("checkStatus","");
 
-             socket.on('iotStatus', function(data) {
+
+
+            socket.on('iotStatus', function(data) {
+             	
              	console.log("iotStatus is " +data);
+
              	if(data==1)
              	{
              		document.getElementById("line2").src="images/greenlineImage.png";
@@ -279,6 +281,10 @@
              	else
              		document.getElementById("line2").src="images/redLineImage.png";
              });
+            	
+            socket.emit("checkStatus","");
+
+
 
              socket.on('InputFromServer', function(data) {
 
