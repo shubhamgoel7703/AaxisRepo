@@ -42,10 +42,23 @@ io.sockets.on('connection', function(socket) {
         if(data=="PLC")
           plcSocket=socket.id;
 
-        socket.emit('iotStatus',"1");
+        socket.broadcast.emit('iotStatus',"1");
 
         console.log("plc connected");
        });
+
+
+      socket.on('checkStatus', function(data) 
+       {
+        
+        id(plcSocket!=null)
+        socket.broadcast.emit('iotStatus',"1");
+
+        else
+           socket.broadcast.emit('iotStatus',"0");
+        
+       });
+
 
        socket.on('InputFromPLC', function(data) 
        {

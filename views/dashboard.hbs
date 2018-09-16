@@ -267,6 +267,8 @@
         <script>
             var socket = io();
             var plcStatus;
+            	
+            socket.emit("checkStatus","");
 
              socket.on('iotStatus', function(data) {
              	console.log("iotStatus is " +data);
