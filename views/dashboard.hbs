@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<!-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
- -->
+
 <html lang="en">
 <head>
 	<title>Cloud Login</title>
@@ -35,15 +34,37 @@
 	<!-- {{name}}
 	<input type="text" value={{name}} name=""> -->
 
+
 	<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 	
 		<div class="container p-l-55 p-r-55 p-t-80 p-b-30" style="background: rgba(255, 255, 255, .8) !important;">
-			<span class="login100-form-title p-b-37">
+			<!-- <span class="login100-form-title p-b-37">
 					<img alt="" src="images/logo.png">
-				</span>
-				<span class="login100-form-title p-b-37">
+				</span> -->
+
+				<div class= "row">
+					<div class="col-md-6"><span class="login100-form-title p-b-37">
+					<img alt="" src="images/logo.png">
+				</span> </div>
+
+				<div class="col-md-6 row">
+
+					<img class="col-md-2" alt="" src="images/plcImage.png" style="width: 50px;height: 50px;">
+					
+					<img id="line1" class="col-md-3" alt="" src="images/redLineImage.png" style="height: 13px; margin-top: 19px;">
+
+					<img class="col-md-2" alt="" src="images/iotImage.png" style="width: 50px;height: 50px; ">
+					
+					<img id="line2" class="col-md-3" alt="" src="images/redLineImage.png" style="height: 13px; margin-top: 19px;">
+
+					<img class="col-md-2" alt="" src="images/cloudImage.png" style="width: 50px;height: 50px;">
+
+				</div>
+				</div>
+					</br>
+				<!-- <span class="login100-form-title p-b-37">
 					Dashboard
-				</span>
+				</span> -->
 				<div class="container">
 				<div class="row" style="flex-wrap: nowrap; margin-left: -32px;">
 				<!-- <div class="col-md-3"></div>  -->
@@ -68,7 +89,7 @@
 				<div class="col-md-5">
 			
 				<div class="col-md-9 row ">
-				<p class="input100" style="padding-top:29px">Input Real 1 [From PLC]</p>
+				<p class="input100" style="padding-top:10px">Input Real 1 [From PLC]</p>
 						<div class="wrap-input100">
 					<input readonly class="input100 centerTextAndAdjustSize" type="text" id="inputParam1" value="" placeholder="input value 1">
 					<span class="focus-input100"></span>
@@ -77,7 +98,7 @@
 				
 				
 				<div class="col-md-9 row">
-				<p class="input100" style="padding-top:29px">Input Real 2</p>
+				<p class="input100" 	">Input Real 2</p>
 						<div class="wrap-input100">
 					<input readonly class="input100 centerTextAndAdjustSize" type="text" id="inputParam2" placeholder="input value 2" />
 					<span class="focus-input100"></span>
@@ -85,7 +106,7 @@
 				</div>
 				
 				<div class="col-md-9 row">
-				<p class="input100" style="padding-top:29px">Input Real 3</p>
+				<p class="input100" style="padding-top:10px">Input Real 3</p>
 						<div class="wrap-input100">
 					<input readonly class="input100 centerTextAndAdjustSize" type="text" id="inputParam3" placeholder="input value 3" />
 					<span class="focus-input100"></span>
@@ -93,7 +114,7 @@
 				</div>
 				
 				<div class="col-md-9 row">
-				<p class="input100" style="padding-top:29px">Input Real 4</p>
+				<p class="input100" style="padding-top:10px">Input Real 4</p>
 						<div class="wrap-input100">
 					<input readonly class="input100 centerTextAndAdjustSize" type="text" id="inputParam4" placeholder="input value 4" />
 					<span class="focus-input100"></span>
@@ -101,7 +122,7 @@
 				</div>
 				
 				<div class="col-md-9 row">
-				<p class="input100" style="padding-top:29px">Input Real 5</p>
+				<p class="input100" style="padding-top:10px">Input Real 5</p>
 						<div class="wrap-input100">
 					<input readonly class="input100 centerTextAndAdjustSize" type="text" id="inputParam5" placeholder="input value 5" />
 					<span class="focus-input100"></span>
@@ -109,7 +130,7 @@
 				</div>
 				
 				<div class="col-md-9 row">
-				<p class="input100" style="padding-top:29px">Input Real 6</p>
+				<p class="input100" style="padding-top:10px">Input Real 6</p>
 						<div class="wrap-input100">
 					<input readonly class="input100 centerTextAndAdjustSize" type="text" id="inputParam6" placeholder="input value 6" />
 					<span class="focus-input100"></span>
@@ -117,7 +138,7 @@
 				</div>
 				
 				<div class="col-md-9 row">
-				<p class="input100" style="padding-top:29px">Input Real 7</p>
+				<p class="input100" style="padding-top:10px">Input Real 7</p>
 						<div class="wrap-input100 validate-input">
 					<input class="input100 centerTextAndAdjustSize" type="text" id="inputParam7" placeholder="input value 7" />
 					<span class="focus-input100"></span>
@@ -125,7 +146,7 @@
 				</div>
 				
 				<div class="col-md-9 row">
-				<p class="input100" style="padding-top:29px">Input Real 8</p>
+				<p class="input100" style="padding-top:10px">Input Real 8</p>
 						<div class="wrap-input100">
 					<input readonly class="input100 centerTextAndAdjustSize" type="text" id="inputParam8" placeholder="input value 8" />
 					<span class="focus-input100"></span>
@@ -142,72 +163,72 @@
 				<div class="col-md-5">
 				
 				<div class="col-md-9 row">
-				<p class="input100" style="padding-top:29px">Output Real 1 [To PLC]</p>
+				<p class="input100" style="padding-top:10px">Output Real 1 [To PLC]</p>
 						<div class="wrap-input100 ">
-					<input class="input100 centerTextAndAdjustSize" type="text" id="outputParam1" placeholder="output value 1" value="12" onblur="SendOutput('1',document.getElementById('outputParam1').value) " />
+					<input class="input100 centerTextAndAdjustSize" type="text" id="outputParam1" placeholder="output value 1" value="12" onkeypress="SendOutput(event,'1',document.getElementById('outputParam1').value) " />
 					<span class="focus-input100"></span>
 				</div>
 				</div>
 				
 				<div class="col-md-9 row">
-				<p class="input100" style="padding-top:29px">Output Real 2</p>
+				<p class="input100" style="padding-top:10px">Output Real 2</p>
 						<div class="wrap-input100 ">
 					<input class="input100 centerTextAndAdjustSize" type="text" id="outputParam2" placeholder="output value 2" value="12"
-					onblur="SendOutput('2',document.getElementById('outputParam2').value)" />
+					onkeypress="SendOutput(event,'2',document.getElementById('outputParam2').value)" />
 					<span class="focus-input100"></span>
 				</div>
 				</div>
 				
 				<div class="col-md-9 row">
-				<p class="input100" style="padding-top:29px">Output Real 3</p>
+				<p class="input100" style="padding-top:10px">Output Real 3</p>
 						<div class="wrap-input100 ">
 					<input class="input100 centerTextAndAdjustSize" type="text" id="outputParam3" placeholder="output value 3" value="12"
-					onblur="SendOutput('3',document.getElementById('outputParam3').value)" />
+					onkeypress="SendOutput(event,'3',document.getElementById('outputParam3').value)" />
 					<span class="focus-input100"></span>
 				</div>
 				</div>
 				
 				<div class="col-md-9 row">
-				<p class="input100" style="padding-top:29px">Output Real 4</p>
+				<p class="input100" style="padding-top:10px">Output Real 4</p>
 						<div class="wrap-input100">
 					<input class="input100 centerTextAndAdjustSize" type="text" id="outputParam4" placeholder="output value 4" value="12"
-					onblur="SendOutput('4',document.getElementById('outputParam4').value)" />
+					onkeypress="SendOutput(event,'4',document.getElementById('outputParam4').value)" />
 					<span class="focus-input100"></span>
 				</div>
 				</div>
 				
 				<div class="col-md-9 row">
-				<p class="input100" style="padding-top:29px">Output Real 5</p>
+				<p class="input100" style="padding-top:10px">Output Real 5</p>
 						<div class="wrap-input100">
 					<input class="input100 centerTextAndAdjustSize" type="text" id="outputParam5" placeholder="output value 5" value="12"
-					onblur="SendOutput('5',document.getElementById('outputParam5').value)" />
+					onkeypress="SendOutput(event,'5',document.getElementById('outputParam5').value)" />
 					<span class="focus-input100"></span>
 				</div>
 				</div>
 				
 				<div class="col-md-9 row">
-				<p class="input100" style="padding-top:29px">Output Real 6</p>
+				<p class="input100" style="padding-top:10px">Output Real 6</p>
 						<div class="wrap-input100">
 					<input class="input100 centerTextAndAdjustSize" type="text" id="outputParam6" placeholder="output value 6" value="12"
-					onblur="SendOutput('6',document.getElementById('outputParam6').value)" />
+					onkeypress="SendOutput(event,'6',document.getElementById('outputParam6').value)" />
 					<span class="focus-input100"></span>
 				</div>
 				</div>
 
 				<div class="col-md-9 row">
-				<p class="input100" style="padding-top:29px">Output Real 7</p>
+				<p class="input100" style="padding-top:10px">Output Real 7</p>
 						<div class="wrap-input100">
 					<input class="input100 centerTextAndAdjustSize" type="text" id="outputParam7" placeholder="output value 7" value="12"
-					onchange="SendOutput('7',document.getElementById('outputParam7').value)" />
+					onkeypress="SendOutput(event,'7',document.getElementById('outputParam7').value)" />
 					<span class="focus-input100"></span>
 				</div>
 				</div>
 
 				<div class="col-md-9 row">
-				<p class="input100" style="padding-top:29px">Output Real 8</p>
+				<p class="input100" style="padding-top:10px">Output Real 8</p>
 						<div class="wrap-input100">
 					<input class="input100 centerTextAndAdjustSize" type="text" id="outputParam8" placeholder="output value 8" value="12"
-					onchange="SendOutput('8',document.getElementById('outputParam8').value)" />
+					onkeypress="SendOutput(event,'8',document.getElementById('outputParam8').value)" />
 					<span class="focus-input100"></span>
 				</div>
 				</div>
@@ -215,19 +236,9 @@
 				</div>
 				
 				
-				</div>   <!-- row -->
-				
-				<!-- onblur="setPointOnBlur()" -->
-				
-				
-				<!-- <button id="pumpOffButton" class="login100-form-btn col-md-2" style="background-color: #d45959; float:right;" onclick="pumpOff()">
-						Pump off
-					</button> -->
-				
-				
-			
+				</div>
 
-			
+
 		</div>
 	</div>
 	
@@ -255,7 +266,17 @@
 	<script src='/socket.io/socket.io.js'></script>
         <script>
             var socket = io();
+            var plcStatus;
 
+             socket.on('iotStatus', function(data) {
+             	console.log("iotStatus is " +data);
+             	if(data==1)
+             	{
+             		document.getElementById("line2").src="images/greenLineImage.png";
+             	}
+             	else
+             		document.getElementById("line2").src="images/redLineImage.png";
+             });
 
              socket.on('InputFromServer', function(data) {
 
@@ -264,17 +285,29 @@
 	        	document.getElementById(Object.keys(data)[i]).value = data[Object.keys(data)[i]];        	
 		     	console.log(Object.keys(data)[i] + " -----" + data[Object.keys(data)[i]]);
 	      	  }
+	      	  clearInterval(plcStatus);
+
+	      	  document.getElementById("line1").src="images/greenLineImage.png";
+
+	      	  plcStatus =setInterval(plcStatusFunction,7000);
 
              });
 
+             function plcStatusFunction()
+             {
+             	document.getElementById("line1").src="images/redLineImage.png";
+             }
+
        
-            function SendOutput(index,value) {
+            function SendOutput(e,index,value) {
             	// validation
             	var numbers = /^[0-9.]+$/;
 
+            if (e.keyCode == 13) {
+            	console.log("enter");
             	if(value.match(numbers))
       			{
-      				alert('Output Parameter Number '+index+' is modified as '+value);
+      				//alert('Output Parameter Number '+index+' is modified as '+value);
                 	console.log(index+"  :  "+value);
                 	socket.emit('OutputFromFE', {"index":index,"value":value});
                 }
@@ -282,10 +315,10 @@
                 else
                 {
                 	document.getElementById("outputParam"+index).value="";
-                	//str.substring(1, 4);
                 	alert('Output Parameter Number '+index+' is in improper format '+value);
                 	console.log("fail");
                 }
+            }
             }
 
             function onFunction()

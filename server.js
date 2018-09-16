@@ -34,13 +34,15 @@ io.sockets.on('connection', function(socket) {
     // Use socket to communicate with this particular client only, sending it it's own id
 
     //Remove it
-       socket.emit('InputFromServer', InputData);
+      // socket.emit('InputFromServer', InputData);
     ////
 
       socket.on('ConnectionType', function(data) 
        {
         if(data=="PLC")
           plcSocket=socket.id;
+
+        socket.emit('iotStatus',"1");
 
         console.log("plc connected");
        });
@@ -64,6 +66,7 @@ io.sockets.on('connection', function(socket) {
         if(socket.id==plcSocket)
         {
           plcSocket=null;
+          socket.emit('iotStatus',"0");
           console.log("plc disconnected");
         }
 
