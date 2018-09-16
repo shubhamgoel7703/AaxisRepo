@@ -51,7 +51,7 @@ io.sockets.on('connection', function(socket) {
       socket.on('checkStatus', function(data) 
        {
         
-        id(plcSocket!=null)
+        if(plcSocket!=null)
         socket.broadcast.emit('iotStatus',"1");
 
         else
@@ -79,7 +79,7 @@ io.sockets.on('connection', function(socket) {
         if(socket.id==plcSocket)
         {
           plcSocket=null;
-          socket.emit('iotStatus',"0");
+          socket.broadcast.emit('iotStatus',"0");
           console.log("plc disconnected");
         }
 
