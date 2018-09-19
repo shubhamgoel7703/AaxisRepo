@@ -41,13 +41,21 @@
 			<!-- <span class="login100-form-title p-b-37">
 					<img alt="" src="images/logo.png">
 				</span> -->
+				<input type="button" name="hidden">
 
 				<div class= "row">
-					<div class="col-md-12"><span class="login100-form-title p-b-37">
+					<div class="col-md-12">
+						<span class="login100-form-title p-b-37">
 					<img alt="" src="images/logo.png">
-				</span> </div>
+						</span> 
+					</div>
+				</div>
 
-				<!-- <div class="col-md-6 row">
+
+				 <div class="row">
+				 	
+				 	<div class="col-md-6"></div>
+				 	<div class="col-md-6 row">
 
 					<img class="col-md-2" alt="" src="images/plcImage.png" style="width: 50px;height: 50px;">
 					
@@ -59,8 +67,11 @@
 
 					<img class="col-md-2" alt="" src="images/cloudImage.png" style="width: 50px;height: 50px;">
 
-				</div> -->
-				</div>
+					</div>
+				</div> 
+
+
+				
 					</br>
 				<!-- <span class="login100-form-title p-b-37">
 					Dashboard
@@ -282,7 +293,7 @@
              		document.getElementById("line2").src="images/redLineImage.png";
              });
             	
-            socket.emit("checkStatus","");
+           
 
 
 
@@ -342,8 +353,15 @@
             	document.getElementById("OffButton").style.opacity="1";
             	document.getElementById("OnButton").style.opacity="0.5";
             }
+
+
+            $(document).ready(function(){
+			socket.emit('checkStatus',"");
+			});
+
         </script>
 	
 
 </body>
+
 </html>
