@@ -356,8 +356,13 @@
 
 
             $(document).ready(function(){
-			socket.emit('checkStatus',"");
+				setTimeout(checkStatus, 5000);
 			});
+
+			function checkStatus()
+			{
+				socket.emit('checkStatus',"");
+			}
 
         </script>
 	
