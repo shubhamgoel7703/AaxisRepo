@@ -13,6 +13,7 @@ router.post('/dashboard', function (req, res, next) {
 	
 	if(req.body.username == 'admin' && req.body.pass == 'admin')
 	{	
+		console.log("Yesss");
 		//res.send({ foo : 'bar' });	
 		var name = 'hello';
     	res.render('dashboard',  {name:name});
